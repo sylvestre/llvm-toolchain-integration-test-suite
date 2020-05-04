@@ -1,7 +1,7 @@
 // Test the link against libclang-cppXX
 //
-// REQUIRES: clang
-// RUN: %clangxx -lclang-cpp -v %s -o %t
+// REQUIRES: clang, llvm-config
+// RUN: %clangxx -lclang-cpp `%llvm-config --cxxflags` -v %s -o %t
 // RUN: ldd %t 2>&1|grep -q libclang-cpp
 // RUN: %t
 
