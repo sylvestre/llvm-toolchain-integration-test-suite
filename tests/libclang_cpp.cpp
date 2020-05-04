@@ -1,9 +1,8 @@
 // Test the link against libclang-cppXX
 //
 // REQUIRES: clang, llvm-config
-// RUN: %clangxx -lclang-cpp `%llvm-config --cxxflags` -v %s -o %t
+// RUN: %clangxx -lclang-cpp -v %s -o %t `%llvm-config --cxxflags  --libs`
 // RUN: ldd %t 2>&1|grep -q libclang-cpp
-// RUN: %t
 
 #include "clang/Tooling/CommonOptionsParser.h"
 #include "llvm/Support/CommandLine.h"
