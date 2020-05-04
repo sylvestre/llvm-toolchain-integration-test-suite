@@ -18,6 +18,7 @@ jobs:
             - lldb-10
             - llvm-10-tools
             - libclang-cpp10-dev
+            - libclang-10-dev
             - libomp-10-dev
             - libc++-10-dev
             - libc++abi-10-dev
